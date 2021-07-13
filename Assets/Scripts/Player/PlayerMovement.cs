@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _jumpHeight = 2f;
 
+    [SerializeField] private Animator _anim;
+
     private Vector3 _velocity;
     private bool _isGrounded;
 
@@ -28,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 direction = transform.right * x + transform.forward * z;
+
+        if (Mathf.Approximately(direction.magnitude, 0)) {
+            _anim.SetBool("isWalk", false);
+        } else {
+            _anim.SetBool("isWalk", true);
+        }
 
         _controller.Move(direction * _speed * Time.deltaTime);
 
