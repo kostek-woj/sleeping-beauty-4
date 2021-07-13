@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\SpidersSpawner.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\ManaPotion.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovementPhysics.cs" />
     <Compile Include="Assets\Scripts\EnemySpider.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Fireball.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\Scripts\TriggerBridge.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerThrowsFlask.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
@@ -88,6 +90,8 @@
     <Compile Include="Assets\Imported\SimpleSkeletonFree\Script\Character\PlayerController.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Portcullis.cs" />
+    <Compile Include="Assets\Scripts\ExplosiveFlask.cs" />
+    <Compile Include="Assets\Walking.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartLava.shader" />

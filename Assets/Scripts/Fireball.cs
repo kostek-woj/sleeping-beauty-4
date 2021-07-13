@@ -14,6 +14,6 @@ public class Fireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.forward * Time.deltaTime * _shootingSpeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * _shootingSpeed);
     }
 }

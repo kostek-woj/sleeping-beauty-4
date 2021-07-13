@@ -11,7 +11,10 @@ public class SkeletonPatrol : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private LayerMask _whatIsGround, _whatIsPlayer;
     [SerializeField] private float _sightRange = 10f, _attackRange = 3f;
+    [SerializeField] private float _viewAngle = 30f;
+    [SerializeField] private float _maxDistanceToPlayer = 3f;
     [SerializeField] private bool _isPlayerInSightRange, _isPlayerInAttackRange;
+
 
     [SerializeField] private float _timeBetweenAttacks = 2f;
     private bool _hasAlreadyAttacked;
@@ -49,6 +52,11 @@ public class SkeletonPatrol : MonoBehaviour
 
         _isPlayerInSightRange = Physics.CheckSphere(transform.position, _sightRange, _whatIsPlayer);
         _isPlayerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _whatIsPlayer);
+
+        if (Physics.Raycast(transform.position, _player.position, _maxDistanceToPlayer)) {
+            Debug.DrawRay(transform.position, _player.position, Color.blue);
+            print("Player is in sight!");
+        }
 
         // Patrolling
         if (!_isPlayerInSightRange && !_isPlayerInAttackRange) {
@@ -98,5 +106,10 @@ public class SkeletonPatrol : MonoBehaviour
                 _currentPatrolIndex = _patrolPoints.Length - 1;
             }
         }
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _maxDistanceToPlayer);
     }
 }
