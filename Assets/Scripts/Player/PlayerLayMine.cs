@@ -15,7 +15,7 @@ public class PlayerLayMine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) {
+        if (!PlayerToggleMenu.menuOpened && Input.GetMouseButtonDown(1)) {
             Instantiate(_mine, new Vector3(transform.position.x, transform.position.y - 0.3f, transform.position.z), Quaternion.identity);
         }
     }

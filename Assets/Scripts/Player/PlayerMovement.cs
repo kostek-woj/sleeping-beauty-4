@@ -20,32 +20,34 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+        if (!PlayerToggleMenu.menuOpened) {
+            _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
 
-        if (_isGrounded && _velocity.y < 0) {
-            _velocity.y = -2f;
+            if (_isGrounded && _velocity.y < 0) {
+                _velocity.y = -2f;
+            }
+
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 direction = transform.right * x + transform.forward * z;
+
+            if (Mathf.Approximately(direction.magnitude, 0)) {
+                _anim.SetBool("isWalk", false);
+            } else {
+                _anim.SetBool("isWalk", true);
+            }
+
+            _controller.Move(direction * _speed * Time.deltaTime);
+
+            if (Input.GetButtonDown("Jump") && _isGrounded) {
+                _velocity.y = Mathf.Sqrt(_jumpHeight * -3f * _gravity);
+            }
+
+            _velocity.y += _gravity * Time.deltaTime;
+
+            _controller.Move(_velocity * Time.deltaTime);
         }
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 direction = transform.right * x + transform.forward * z;
-
-        if (Mathf.Approximately(direction.magnitude, 0)) {
-            _anim.SetBool("isWalk", false);
-        } else {
-            _anim.SetBool("isWalk", true);
-        }
-
-        _controller.Move(direction * _speed * Time.deltaTime);
-
-        if (Input.GetButtonDown("Jump") && _isGrounded) {
-            _velocity.y = Mathf.Sqrt(_jumpHeight * -3f * _gravity);
-        }
-
-        _velocity.y += _gravity * Time.deltaTime;
-
-        _controller.Move(_velocity * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision) {
