@@ -35,7 +35,7 @@ public class PlayerThrowsFlask : MonoBehaviour
             _casting = Input.GetKeyDown(KeyCode.F);
         }
 
-        if (_casting) {
+        if (!PlayerToggleMenu.menuOpened && _casting) {
             ThrowFlask();
         }
     }

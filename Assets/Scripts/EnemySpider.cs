@@ -107,6 +107,7 @@ public class EnemySpider : MonoBehaviour
     private void Die() {
         Destroy(gameObject);
         SpidersSpawner.spidersAmount--;
+        SpidersSpawner.spidersKilled++;
     }
 
     private void OnDrawGizmosSelected() {

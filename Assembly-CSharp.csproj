@@ -63,6 +63,7 @@
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Scripts\Totem.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerToggleMenu.cs" />
     <Compile Include="Assets\Scripts\TriggerDoorController.cs" />
     <Compile Include="Assets\Scripts\HealthPotion.cs" />
     <Compile Include="Assets\Scripts\SkeletonPatrol.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\SpidersSpawner.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\ManaPotion.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementPhysics.cs" />
@@ -78,7 +80,10 @@
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Fireball.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\ExplosiveFlask.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\Walking.cs" />
+    <Compile Include="Assets\Scripts\Player\BarMana.cs" />
     <Compile Include="Assets\Scripts\TriggerBridge.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerThrowsFlask.cs" />
@@ -88,35 +93,57 @@
     <Compile Include="Assets\Scripts\PotionsSpawner.cs" />
     <Compile Include="Assets\Scripts\SkeletonMove.cs" />
     <Compile Include="Assets\Imported\SimpleSkeletonFree\Script\Character\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\BarHealth.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Portcullis.cs" />
-    <Compile Include="Assets\Scripts\ExplosiveFlask.cs" />
-    <Compile Include="Assets\Walking.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem.cs" />
+    <Compile Include="Assets\Scripts\TriggerDialog.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartLava.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Imported\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Imported\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_Standart.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartVertexCDetails.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartInnerGlow.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartMaskedDetails.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartTransparent.shader" />
      <None Include="Assets\Imported\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartInnerGlowIce.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartInnerGlowIceT.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartCutoutMoss.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartTransparentAdditive.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Imported\Cartoon Castle Building Kit\ReadMe.txt" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartMaskedDetailsRim.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_Standart2Sided.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartSnow.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Imported\JKT_ART\etc\MatCap.shader" />
      <None Include="Assets\Imported\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_Standart2SidedSimple.shader" />
      <None Include="Assets\Imported\FreeWeapons\Read_me.txt" />
      <None Include="Assets\Imported\_MasksPack2\__CubemapsShaders\ASE_StandartArray.shader" />
      <None Include="Assets\Imported\Hand Painted Seamless Wood Texture\Documentation\Documentation.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -710,6 +737,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
