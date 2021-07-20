@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\TriggerDialog.cs" />
     <Compile Include="Assets\Scripts\Player\Spell.cs" />
     <Compile Include="Assets\Scripts\Player\Shoot.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -91,13 +92,13 @@
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Scripts\PotionsSpawner.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\SkeletonMove.cs" />
     <Compile Include="Assets\Imported\SimpleSkeletonFree\Script\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\BarHealth.cs" />
     <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Portcullis.cs" />
-    <Compile Include="Assets\Scripts\DialogSystem.cs" />
-    <Compile Include="Assets\Scripts\TriggerDialog.cs" />
+    <Compile Include="Assets\Scripts\PlaySoundInside.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -729,6 +730,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -737,9 +741,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

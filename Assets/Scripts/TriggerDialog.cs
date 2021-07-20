@@ -20,7 +20,7 @@ public class TriggerDialog : MonoBehaviour
             print("Can enter: " + SpidersSpawner.spidersKilled);
             SceneManager.LoadScene("Boss");
         } else {
-            //_dialogCannotEnter.enabled  = true;
+            _dialogCannotEnter.enabled  = true;
             print("Cannot enter: " + SpidersSpawner.spidersKilled);
         }
     }
