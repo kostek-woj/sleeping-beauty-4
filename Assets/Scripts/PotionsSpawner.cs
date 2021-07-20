@@ -16,7 +16,7 @@ public class PotionsSpawner : MonoBehaviour
     {
         if (!_hasSpawned) {
             foreach (Transform spawnPoint in _spawnPoints) {
-                Debug.Log("SpawnPoint: " + spawnPoint.position);
+                //Debug.Log("SpawnPoint: " + spawnPoint.position);
                 int potion = Random.Range(0, 2);
                 if (potion == 0) {
                     Instantiate(_healthPotionPrefab, spawnPoint.position, Quaternion.identity);

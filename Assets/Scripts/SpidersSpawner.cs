@@ -9,6 +9,8 @@ public class SpidersSpawner : MonoBehaviour
     [SerializeField] private Vector3 _spawnPosition;
 
     public static int spidersAmount = 0;
+    public static int spidersKilled = 0;
+    public static int spidersToKill = 5;
 
     private GameObject _newSpider;
 
